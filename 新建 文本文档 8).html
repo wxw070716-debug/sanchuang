@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>钒华落尽｜西昌固废资源化 × 精铁矿B2B电商平台</title>
+  <meta name="description" content="面向四川凉山州西昌市的固废资源化与精铁矿B2B电商平台：标准化商品、在线询价、长期协议价、可追溯交付与对账服务。" />
+  <style>
+    :root{
+      --bg:#070a12;
+      --panel:#0c1220;
+      --card:rgba(255,255,255,.04);
+      --stroke:rgba(255,255,255,.10);
+      --text:#e7eaf0;
+      --muted:#9aa4b2;
+      --brand:#22c55e;
+      --brand2:#60a5fa;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+        "PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1100px 600px at 18% -10%, rgba(34,197,94,.35), transparent 55%),
+        radial-gradient(900px 520px at 88% 0%, rgba(96,165,250,.35), transparent 55%),
+        radial-gradient(900px 520px at 50% 120%, rgba(34,197,94,.18), transparent 60%),
+        linear-gradient(180deg, var(--bg), #05070c 70%);
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+    /* Header */
+    .header{
+      position:sticky;top:0;z-index:50;
+      background: rgba(7,10,18,.65);
+      backdrop-filter: blur(16px);
+      border-bottom:1px solid var(--stroke);
+    }
+    .header .wrap{padding:14px 24px}
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .brand{
+      display:flex;align-items:center;gap:10px;
+      font-weight:900;letter-spacing:.3px;
+    }
+    .logo{
+      width:36px;height:36px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(96,165,250,.85));
+      box-shadow: 0 18px 50px rgba(34,197,94,.20);
+    }
+    .nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+    .nav a{color:var(--muted);font-weight:700;font-size:13.5px}
+    .nav a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:10px 14px;border-radius:14px;
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      color:var(--text);font-weight:800;
+      cursor:pointer;transition:.2s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(34,197,94,.22), rgba(96,165,250,.14));
+      border-color: rgba(34,197,94,.35);
+      box-shadow: 0 18px 60px rgba(34,197,94,.12);
+    }
+
+    /* Hero */
+    .hero{padding:48px 0 18px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+    @media (max-width: 960px){ .hero-grid{grid-template-columns:1fr} }
+    .panel{
+      border-radius:var(--radius);
+      border:1px solid var(--stroke);
+      background: rgba(12,18,32,.66);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-left{padding:30px}
+    .tagline{
+      display:inline-flex;align-items:center;gap:10px;
+      color:var(--muted);font-weight:800;font-size:13px;
+    }
+    .dot{width:9px;height:9px;border-radius:99px;background:var(--brand)}
+    h1{margin:14px 0 10px;font-size:44px;line-height:1.1;letter-spacing:-.6px}
+    @media (max-width: 520px){ h1{font-size:34px} }
+    .lead{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.8}
+    .pills{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 22px}
+    .pill{
+      padding:8px 11px;border-radius:999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      color:#cbd5e1;
+      font-weight:800;font-size:12.5px;
+    }
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+    .ghost{
+      background: transparent;
+      border-color: rgba(255,255,255,.14);
+    }
+    /* Right highlight */
+    .hero-right{padding:20px}
+    .metric{
+      padding:16px;border-radius:18px;border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+    }
+    .metric + .metric{margin-top:12px}
+    .metric strong{display:block;font-size:14px;margin-bottom:6px}
+    .metric span{color:var(--muted);line-height:1.7;font-size:13.5px}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:7px 10px;border-radius:999px;
+      border:1px solid rgba(96,165,250,.25);
+      background: rgba(96,165,250,.12);
+      color:#dbeafe;
+      font-weight:800;font-size:12px;
+      margin-top:12px;
+    }
+
+    /* Sections */
+    section{padding:34px 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .section-head h2{margin:0;font-size:22px}
+    .section-head p{margin:0;color:var(--muted);line-height:1.8;max-width:760px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+    @media (max-width: 960px){ .grid3{grid-template-columns:1fr} }
+    .card{
+      padding:18px;border-radius:18px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      height:100%;
+    }
+    .ico{
+      width:42px;height:42px;border-radius:16px;
+      display:flex;align-items:center;justify-content:center;
+      background: rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.24);
+      font-weight:900;margin-bottom:12px;
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);line-height:1.8}
+
+    /* Timeline */
+    .steps{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    @media (max-width: 960px){ .steps{grid-template-columns:1fr} }
+    .step{
+      padding:18px;border-radius:18px;border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+    }
+    .step h4{margin:0 0 8px;font-size:15.5px;display:flex;align-items:center;gap:10px}
+    .n{
+      width:30px;height:30px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      background: rgba(34,197,94,.18);
+      border:1px solid rgba(34,197,94,.28);
+      font-weight:900;
+    }
+    .step p{margin:0;color:var(--muted);line-height:1.8}
+
+    /* CTA block */
+    .cta{
+      margin-top:14px;
+      padding:24px;border-radius:22px;
+      border:1px solid rgba(34,197,94,.22);
+      background: linear-gradient(135deg, rgba(34,197,94,.16), rgba(96,165,250,.10));
+      box-shadow: 0 20px 70px rgba(34,197,94,.10);
+      display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    }
+    .cta h3{margin:0;font-size:18px}
+    .cta p{margin:6px 0 0;color:var(--muted);line-height:1.8;max-width:760px}
+
+    /* Footer */
+    footer{padding:30px 0 44px;border-top:1px solid var(--stroke);color:rgba(203,213,225,.78)}
+    .foot{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .small{font-size:12.8px;color:rgba(148,163,184,.9);line-height:1.8}
+    /* Mobile nav collapse */
+    .menu-btn{display:none}
+    @media (max-width: 720px){
+      .nav{display:none}
+      .menu-btn{display:inline-flex}
+      .mobile{display:none;margin-top:10px;border-top:1px solid var(--stroke);padding-top:10px}
+      .mobile a{display:block;padding:10px 0;color:var(--muted);font-weight:800}
+      .mobile a:hover{color:var(--text)}
+      .header .wrap{padding:12px 18px}
+      .wrap{padding:18px}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div class="bar">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <span>钒华落尽</span>
+        </div>
+
+        <nav class="nav" aria-label="主导航">
+          <a href="#about">关于我们</a>
+          <a href="#"></a>
+          <a href="#value">核心价值</a>          
+          <a href="#"></a>
+          <a href="#how">我们怎么做</a>
+          <a href="#"></a>
+          <a href="#biz">商业模式</a>
+          <a href="#"></a>
+          <a href="#contact">联系合作</a>
+        </nav>
+
+        <button class="btn menu-btn" id="menuBtn" type="button">菜单</button>
+        <a class="btn primary" href="#contact">获取项目简介</a>
+      </div>
+
+      <div class="mobile" id="mobileNav">
+        <a href="#about">关于我们</a>
+        <a href="#"></a>
+        <a href="#value">核心价值</a>
+        <a href="#"></a>
+        <a href="#how">我们怎么做</a>
+        <a href="#"></a>
+        <a href="#biz">商业模式</a>
+        <a href="#"></a>
+        <a href="#contact">联系合作</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="panel hero-left">
+          <div class="tagline"><span class="dot"></span> 西昌试点 · B2B工业品电商 · 可追溯交付</div>
+          <h1>把资源化产物<br/>做成“可下单”的工业品</h1>
+          <p class="lead">
+            我们面向四川省凉山彝族自治州西昌市及攀西区域，建设“固废资源化 × 精铁矿B2B电商平台”：
+            将精铁矿产品标准化为规格条目，支持<strong>在线询价、现货下单、长期协议价</strong>，
+            并配套<strong>检测报告、物流节点追踪、到货验收、对账与月报</strong>，
+            让企业采购实现更高效率、更低沟通成本与更稳定复购。
+          </p>
+
+          <div class="pills">
+            <span class="pill">核心商品：精铁矿</span>
+            <span class="pill">交易：询价 / 现货 / 长协</span>
+            <span class="pill">履约：检测 + 物流 + 对账</span>
+            <span class="pill">服务：售后工单机制</span>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#contact">合作咨询</a>
+            <a class="btn ghost" href="#how">了解平台流程</a>
+            <button class="btn" id="copyIntro" type="button">一键复制项目简介</button>
+          </div>
+        </div>
+
+        <div class="panel hero-right">
+          <div class="metric">
+            <strong>“我们用电商把资源化产物做成标准工业品，做到可下单、可追溯、可复购。”</strong>
+            <div class="badge">落地：西昌市（四川凉山州）</div>
+          </div>
+
+          <div class="metric">
+            <strong>平台最核心的三件事</strong>
+            <span>
+              ① 标准规格条目（可比价、可验收）<br/>
+              ② 交易规则（询价/现货/长协）<br/>
+              ③ 交付闭环（检测/追踪/对账）
+            </span>
+          </div>
+
+          <div class="metric">
+            <strong>适用客户</strong>
+            <span>钢铁/冶金企业、建材与工程单位、贸易商与供应链企业。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-head">
+        <h2>关于我们</h2>
+        <p>
+          我们致力于把“资源化”从技术成果变成可持续的商业闭环：通过工业品电商平台打通供需两端，
+          以规则化交易、透明履约与服务叠加，推动企业从试单走向长期合作。
+        </p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="ico">🌿</div>
+          <h3>绿色与合规</h3>
+          <p>以资源化为导向，强调可追溯、可审计的交易与交付链路，为企业合规运营提供支持。</p>
+        </div>
+        <div class="card">
+          <div class="ico">🛒</div>
+          <h3>电商化交易</h3>
+          <p>把线下“反复沟通与谈判”沉淀为“询价单、规格条目与合同模板”，提升成交效率。</p>
+        </div>
+        <div class="card">
+          <div class="ico">🚚</div>
+          <h3>交付一体化</h3>
+          <p>检测、物流节点、验收、对账与月报一体化管理，让采购省心，从而提高复购与长协占比。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE -->
+    <section id="value">
+      <div class="section-head">
+        <h2>核心价值</h2>
+        <p>对外宣传建议强调“效率、透明、复购”。这三点是B2B电商能否成立的关键。</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="ico">⚡</div>
+          <h3>更快成交</h3>
+          <p>标准规格条目 + 统一询价单，让采购快速给出需求、平台快速报价，减少沟通往返。</p>
+        </div>
+        <div class="card">
+          <div class="ico">🔎</div>
+          <h3>更透明履约</h3>
+          <p>每批次检测报告与订单绑定，物流节点可追踪，到货验收与工单处理有迹可循。</p>
+        </div>
+        <div class="card">
+          <div class="ico">🔁</div>
+          <h3>更稳定复购</h3>
+          <p>长期协议价支持锁量锁价，按生产节奏分批下单；对账单与月报降低财务对接成本。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how">
+      <div class="section-head">
+        <h2>我们怎么做（平台流程）</h2>
+        <p>对外展示时用“六步闭环”最清晰：成交→交付→对账→复购。</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <h4><span class="n">1</span>在线询价 / 现货下单</h4>
+          <p>选择规格、数量与到货地，形成询价单或直接下单。</p>
+        </div>
+        <div class="step">
+          <h4><span class="n">2</span>规则报价 / 长协执行</h4>
+          <p>现货按规则报价；长协按框架合同执行，减少反复谈判。</p>
+        </div>
+        <div class="step">
+          <h4><span class="n">3</span>检测与批次绑定</h4>
+          <p>每批次生成检测报告并与订单绑定，支撑验收与争议处理。</p>
+        </div>
+        <div class="step">
+          <h4><span class="n">4</span>发运与节点追踪</h4>
+          <p>发运/在途/到货节点可追踪，异常及时提醒与处理。</p>
+        </div>
+        <div class="step">
+          <h4><span class="n">5</span>到货验收与工单机制</h4>
+          <p>按约定标准验收；出现问题进入工单，按规则补差/退换/处理。</p>
+        </div>
+        <div class="step">
+          <h4><span class="n">6</span>对账结算与复购</h4>
+          <p>生成对账单与月报，便于财务结算与内部汇报，促进复购与续签。</p>
+        </div>
+      </div>
+
+      <div class="cta">
+        <div>
+          <h3>用于对外宣传的“资料包”我们能提供什么？</h3>
+          <p>项目简介（报名/公众号）、平台原型图（询价单/订单状态/对账单）、示范订单流程图、规格条目模板（A/B/C等级）。</p>
+        </div>
+        <a class="btn primary" href="#contact">获取资料包</a>
+      </div>
+    </section>
